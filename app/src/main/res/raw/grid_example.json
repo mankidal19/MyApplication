@@ -1,0 +1,17 @@
+{
+  "cards": [
+
+    {
+      "type": "YOUTUBETV_FULLSCREEN",
+      "title": "KBS WORLD LIVE",
+      "description": "classic YoutubeTvView",
+      "localImageResource": "fullscreen"
+    },
+    {
+      "type": "YOUTUBETV_API",
+      "title": "YoutubeTvView API showcase",
+      "description": "YoutubeTvView with button controls",
+      "localImageResource": "api"
+    }
+  ]
+}
