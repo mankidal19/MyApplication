@@ -20,7 +20,7 @@ public class LiveActivity extends FragmentActivity {
 
     //private final String liveVideoId = "zEeSa0KpyOY";
     private String liveVideoId = null;
-
+    private YouTubePlayerView youTubePlayerView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,33 @@ public class LiveActivity extends FragmentActivity {
         initYouTubePlayerView();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(youTubePlayerView !=null){
+            youTubePlayerView.release();
+        }
+
+
+        finish();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
+
+
+
     private void initYouTubePlayerView() {
-        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+        //YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+        youTubePlayerView = findViewById(R.id.youtube_player_view);
         youTubePlayerView.getPlayerUIController().showFullscreenButton(false);
         youTubePlayerView.getPlayerUIController().enableLiveVideoUI(true);
 
@@ -46,7 +71,10 @@ public class LiveActivity extends FragmentActivity {
                     youTubePlayer.loadVideo(liveVideoId,0f);
 
                 }
+
+
             });
+
         }, true);
     }
 
