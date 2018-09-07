@@ -7,6 +7,7 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import com.example.nurulaiman.myapplication.sample.ApiActivity;
+import com.example.nurulaiman.myapplication.sample.LiveActivity;
 import com.squareup.picasso.Picasso;
 
 import com.example.nurulaiman.myapplication.sample.FullscreenActivity;
@@ -46,7 +47,11 @@ public class ImageCardViewPresenter extends AbstractCardPresenter<ImageCardView>
                         intent = new Intent(getContext(), ApiActivity.class);
                         getContext().startActivity(intent);
                         break;
-//
+                    case YOUTUBETV_LIVE:
+                        intent = new Intent(getContext(), LiveActivity.class);
+                        getContext().startActivity(intent);
+                        break;
+
                     default:
                         break;
                 }

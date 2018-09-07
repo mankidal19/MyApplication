@@ -17,6 +17,7 @@
         <item name="imageCardViewImageStyle">@style/DefaultCardImageStyle</item>
     </style>
 
+
     <style name="GameCardStyle" parent="DefaultCardStyle">
         <item name="lbImageCardViewType">Title|Content|IconOnRight</item>
     </style>

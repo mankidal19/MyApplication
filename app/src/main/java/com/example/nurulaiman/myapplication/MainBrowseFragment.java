@@ -27,7 +27,7 @@ import com.google.gson.Gson;
  */
 public class MainBrowseFragment extends VerticalGridFragment {
 
-    private static final int COLUMNS = 2;
+    private static final int COLUMNS = 3;
     private static final int ZOOM_FACTOR = FocusHighlight.ZOOM_FACTOR_MEDIUM;
 
     private ArrayObjectAdapter mAdapter;

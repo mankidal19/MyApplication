@@ -15,7 +15,7 @@
         app:yt_autoplay="true"
         app:yt_debug="false"
         app:yt_showControls="none"
-        app:yt_showNowPlayingCard="true"
+        app:yt_showNowPlayingCard="false"
         app:yt_showRelatedVideos="false"
         app:yt_showVideoInfo="false"
         app:yt_videoAnnotation="false"

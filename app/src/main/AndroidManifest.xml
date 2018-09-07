@@ -21,8 +21,9 @@
         </activity>
         <activity
             android:name=".sample.FullscreenActivity"
-            android:label="@string/title_activity_fullscreen"/>
+            android:label="@string/title_activity_fullscreen" />
         <activity android:name=".sample.ApiActivity" />
+        <activity android:name=".sample.LiveActivity"></activity>
     </application>
 
 </manifest>

@@ -106,7 +106,8 @@ public class Card {
         YOUTUBETV_API,
         YOUTUBETV_SPLITTED,
         YOUTUBETV_DEBUG,
-        YOUTUBE_LICENSE
+        YOUTUBE_LICENSE,
+        YOUTUBETV_LIVE
     }
 
 }
