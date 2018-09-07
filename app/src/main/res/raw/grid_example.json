@@ -54,14 +54,16 @@
       "type": "YOUTUBETV_FULLSCREEN",
       "title": "YoutubeTvView fullscreen showcase",
       "description": "classic YoutubeTvView",
-      "localImageResource": "fullscreen"
+      "localImageResource": "fullscreen",
+      "videoId":"bdnHKdb-Oss"
     },
 
     {
       "type": "YOUTUBETV_API",
       "title": "YoutubeTvView API showcase",
       "description": "YoutubeTvView with button controls",
-      "localImageResource": "api"
+      "localImageResource": "api",
+      "videoId":"bdnHKdb-Oss"
     }
 
   ]

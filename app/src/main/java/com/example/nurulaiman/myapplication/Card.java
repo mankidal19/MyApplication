@@ -35,6 +35,10 @@ public class Card {
     @SerializedName("height")
     private int mHeight;
 
+    //adding for video id
+    @SerializedName("videoId")
+    private String mVideoId;
+
     public String getTitle() {
         return mTitle;
     }
@@ -99,6 +103,12 @@ public class Card {
     public String getFooterLocalImageResourceName() {
         return mFooterResource;
     }
+
+    public String getVideoId() {
+        return mVideoId;
+    }
+
+
 
     public enum Type {
         YOUTUBETV_FRAGMENT,

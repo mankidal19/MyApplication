@@ -3,6 +3,7 @@ package com.example.nurulaiman.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v17.leanback.widget.ImageCardView;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
@@ -16,6 +17,8 @@ public class ImageCardViewPresenter extends AbstractCardPresenter<ImageCardView>
 
     private Card.Type mType;
 
+    private String mVideoId;
+
     public ImageCardViewPresenter(Context context, int cardThemeResId) {
         super(new ContextThemeWrapper(context, cardThemeResId));
     }
@@ -23,6 +26,13 @@ public class ImageCardViewPresenter extends AbstractCardPresenter<ImageCardView>
     public ImageCardViewPresenter(Context context, Card.Type type) {
         this(context, R.style.DefaultCardTheme);
         mType = type;
+    }
+
+    public ImageCardViewPresenter(Context context, Card.Type type, String videoId) {
+        this(context, R.style.DefaultCardTheme);
+        mType = type;
+        mVideoId = videoId;
+        Log.i("ICVP",videoId);
     }
 
     public ImageCardViewPresenter(Context context) {
@@ -49,6 +59,7 @@ public class ImageCardViewPresenter extends AbstractCardPresenter<ImageCardView>
                         break;
                     case YOUTUBETV_LIVE:
                         intent = new Intent(getContext(), LiveActivity.class);
+                        intent.putExtra("videoId",mVideoId);
                         getContext().startActivity(intent);
                         break;
 

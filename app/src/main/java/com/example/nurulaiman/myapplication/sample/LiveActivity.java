@@ -18,7 +18,8 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.YouTubeP
 
 public class LiveActivity extends FragmentActivity {
 
-    private final String liveVideoId = "zEeSa0KpyOY";
+    //private final String liveVideoId = "zEeSa0KpyOY";
+    private String liveVideoId = null;
 
 
     @Override
@@ -33,6 +34,8 @@ public class LiveActivity extends FragmentActivity {
         youTubePlayerView.getPlayerUIController().showFullscreenButton(false);
         youTubePlayerView.getPlayerUIController().enableLiveVideoUI(true);
 
+        liveVideoId = getIntent().getExtras().getString("videoId");
+
         getLifecycle().addObserver(youTubePlayerView);
 
         youTubePlayerView.initialize(youTubePlayer -> {
@@ -41,6 +44,7 @@ public class LiveActivity extends FragmentActivity {
                 @Override
                 public void onReady() {
                     youTubePlayer.loadVideo(liveVideoId,0f);
+
                 }
             });
         }, true);
